@@ -24,10 +24,14 @@ public class sirvatious_attack : BasicMotor<CharacterChannels> {
 			if (sprite.flipX) {
 				Projectile projectile = newProjectitle.GetComponent<Projectile> ();
 				projectile.Fire (new Vector2 (-1, 0));
+                projectile.velocity += (Vector3)GetComponent<CharacterMotor2D>().velocity;
 			} else {
 				Projectile projectile = newProjectitle.GetComponent<Projectile> ();
 				projectile.Fire (new Vector2 (1, 0));
-			}
+                projectile.velocity += (Vector3)GetComponent<CharacterMotor2D>().velocity;
+            }
+
+            
 
 		}
 

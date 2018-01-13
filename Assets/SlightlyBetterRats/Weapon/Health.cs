@@ -16,6 +16,12 @@ namespace SBR {
             health = maxHealth;
         }
 
+        private void Update() {
+            if (transform.position.y < -10) {
+                ApplyDamage(new Damage(100000, transform.position, Vector3.down));
+            }
+        }
+
         public virtual void ApplyDamage(Damage dmg) {
             if (enabled) {
                 health -= dmg.amount;

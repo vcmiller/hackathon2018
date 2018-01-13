@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4141643b4088b842b2b821542a9cc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToLive: 2.145
+  timeToLive: 53.245
 --- !u!198 &198307563665046956
 ParticleSystem:
   m_ObjectHideFlags: 1
