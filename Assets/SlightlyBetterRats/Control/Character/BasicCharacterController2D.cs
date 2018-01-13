@@ -31,5 +31,9 @@ namespace SBR {
         public void ButtonDown_Attack() {
             character.attack = true;
         }
+
+		public void ButtonUp_Attack() {
+			character.attack = false;
+		}
     }
 }
