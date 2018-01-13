@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1711775614663376, guid: 28fd36a8307c47441aa6db97391d9851, type: 2}
-  coolDownnnn: 1.998
+  coolDownnnn: 1.9984
   remainingCooldownnn: 0
 --- !u!1 &1129936444
 GameObject:
