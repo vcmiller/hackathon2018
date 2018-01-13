@@ -13,11 +13,16 @@ public class siraldi_attack : BasicMotor<CharacterChannels> {
 		LineRenderer beam = GetComponentInChildren<LineRenderer> ();
 		SpriteRenderer sprite = GetComponent<SpriteRenderer> ();
 
+		RaycastHit2D obj = Physics2D.Raycast (transform.position, sprite.flipX ? new Vector2 (-1, 0) : new Vector2 (1, 0));
+		float True = 9999.9f;
+		if (obj) {
+			True = obj.distance;
+		}
 		if (channels.attack) { 
 			if(sprite.flipX)
-				beam.SetPosition (1, new Vector3 (-9, 0, 0));
+				beam.SetPosition (1, new Vector3 (-True, 0, 0));
 			else
-				beam.SetPosition (1, new Vector3 (9, 0, 0));
+				beam.SetPosition (1, new Vector3 (True, 0, 0));
 			
 		}
 		else
