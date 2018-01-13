@@ -6,6 +6,7 @@ public class CharacterChannels : SBR.Channels {
         RegisterInputChannel("movement", new Vector3(0, 0, 0), true);
         RegisterInputChannel("rotation", new Quaternion(0, 0, 0, 1), false);
         RegisterInputChannel("jump", false, false);
+        RegisterInputChannel("attack", false, true);
 
     }
     
@@ -37,6 +38,16 @@ public class CharacterChannels : SBR.Channels {
 
         set {
             SetInput("jump", value);
+        }
+    }
+
+    public bool attack {
+        get {
+            return GetInput<bool>("attack");
+        }
+
+        set {
+            SetInput("attack", value);
         }
     }
 

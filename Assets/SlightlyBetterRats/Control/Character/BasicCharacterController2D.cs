@@ -27,5 +27,9 @@ namespace SBR {
         public void ButtonUp_Jump() {
             character.jump = false;
         }
+
+        public void ButtonDown_Attack() {
+            character.attack = true;
+        }
     }
 }
